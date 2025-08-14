@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neoworx Customer Journey Map</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8fafc;
+        }
+        
+        .phase-card {
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        
+        .phase-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .journey-line {
+            position: relative;
+            height: 100px;
+            width: 2px;
+            background: linear-gradient(to bottom, #3b82f6, #8b5cf6, #ec4899, #f59e0b);
+            margin: 0 auto;
+        }
+        
+        .journey-line::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -8px;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: #3b82f6;
+        }
+        
+        .journey-line::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: -8px;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: #f59e0b;
+        }
+        
+        .phase-1 { border-top: 5px solid #3b82f6; }
+        .phase-2 { border-top: 5px solid #8b5cf6; }
+        .phase-3 { border-top: 5px solid #ec4899; }
+        .phase-4 { border-top: 5px solid #f59e0b; }
+        
+        .benefit-icon {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+        }
+        
+        .animate-pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-purple-50">
+    <div class="container mx-auto px-4 py-12">
+        <!-- Header -->
+        <header class="text-center mb-16">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+                <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
+                    Neoworx Customer Journey
+                </span>
+            </h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                A strategic 4-phase roadmap to build, launch, and scale your business with professional branding, digital presence, operational efficiency, and AI-powered growth.
+            </p>
+            <div class="mt-8 flex justify-center">
+                <div class="journey-line"></div>
+            </div>
+        </header>
+        
+        <!-- Phase 1 -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+            <div class="phase-card bg-white rounded-xl p-8 phase-1 animate-pulse">
+                <div class="flex items-center mb-6">
+                    <div class="bg-blue-100 text-blue-600 rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                        <span class="font-bold text-xl">1</span>
+                    </div>
+                    <h2 class="text-2xl font-bold text-gray-800">Brand Foundation & Visual Identity Creation</h2>
+                </div>
+                
+                <div class="mb-6">
+                    <h3 class="text-lg font-semibold text-blue-600 mb-2">Goal</h3>
+                    <p class="text-gray-600">Build a strong, recognizable brand that communicates trust and value from day one.</p>
+                </div>
+                
+                <div class="mb-6">
+                    <h3 class="text-lg font-semibold text-blue-600 mb-2">Key Steps</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-400 mt-1 mr-2"></i>
+                            <span>Brand Strategy – Define mission, vision, values, target audience, and USP</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-400 mt-1 mr-2"></i>
+                            <span>Visual Identity Design – Create professional logo, color palette, typography, and brand elements</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-400 mt-1 mr-2"></i>
+                            <span>Brand Guidelines – Develop a style guide for consistent communications</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="mb-6">
+                    <h3 class="text-lg font-semibold text-blue-600 mb-2">Deliverables</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm">Brand strategy document</span>
+                        <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm">Visual identity package</span>
+                        <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm">Brand style guide</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flex flex-col justify-center">
+                <div class="benefit-icon bg-blue-100 text-blue-600">
+                    <i class="fas fa-medal text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-center text-gray-800 mb-4">Customer Benefit</h3>
+                <p class="text-center text-gray-600 text-lg px-8">
+                    A solid, professional foundation that makes your brand instantly recognizable and memorable, establishing credibility in your market.
+                </p>
+                
+                <div class="mt-8 flex justify-center">
+                    <div class="bg-blue-100 p-6 rounded-xl max-w-md">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-500 text-white rounded-full w-10 h-10 flex items-center justify-center mr-3">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <h4 class="font-semibold text-gray-800">Why This Matters</h4>
+                        </div>
+                        <p class="text-gray-600">
+                            Your brand is often the first impression customers have of your business. A professional identity builds trust and differentiates you from competitors.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Journey Line -->
+        <div class="flex justify-center mb-16">
+            <div class="journey-line"></div>
+        </div>
+        
+        <!-- Phase 2 -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+            <div class="order-last lg:order-first flex flex-col justify-center">
+                <div class="benefit-icon bg-purple-100 text-purple-600">
+                    <i class="fas fa-globe text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-center text-gray-800 mb-4">Customer Benefit</h3>
+                <p class="text-center text-gray-600 text-lg px-8">
+                    A professional digital storefront and brand voice that work 24/7 to generate opportunities and engage your target audience.
+                </p>
+                
+                <div class="mt-8 flex justify-center">
+                    <div class="bg-purple-100 p-6 rounded-xl max-w-md">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-purple-500 text-white rounded-full w-10 h-10 flex items-center justify-center mr-3">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h4 class="font-semibold text-gray-800">Digital Impact</h4>
+                        </div>
+                        <p class="text-gray-600">
+                            Businesses with strong digital presence grow 40% faster. Your website and social media are your most powerful sales tools.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="phase-card bg-white rounded-xl p-8 phase-2">
+                <div class="flex items-center mb-6">
+                    <div class="bg-purple-100 text-purple-600 rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                        <span class="font-bold text-xl">2</span>
+                    </div>
+                    <h2 class="text-2xl font-bold text-gray-800">Digital Presence & Social Media Asset Creation</h2>
+                </div>
+                
+                <div class="mb-6">
+                    <h3 class="text-lg font-semibold text-purple-600 mb-2">Goal</h3>
+                    <p class="text-gray-600">Establish a high-impact online presence that attracts, engages, and converts customers.</p>
+                </div>
+                
+                <div class="mb-6">
+                    <h3 class="text-lg font-semibold text-purple-600 mb-2">Key Steps</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-purple-400 mt-1 mr-2"></i>
+                            <span>Website Design & Development – Responsive, SEO-friendly, and conversion-focused</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-purple-400 mt-1 mr-2"></i>
+                            <span>Content Creation – Engaging copy, visuals, and videos tailored to your audience</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-purple-400 mt-1 mr-2"></i>
+                            <span>Social Media Branding – Branded templates, profile designs, and content starter packs</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="mb-6">
+                    <h3 class="text-lg font-semibold text-purple-600 mb-2">Deliverables</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm">Live, optimized website</span>
+                        <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm">Content library</span>
+                        <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm">Branded social media asset kit</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Journey Line -->
+        <div class="flex justify-center mb-16">
+            <div class="journey-line"></div>
+        </div>
+        
+        <!-- Phase 3 -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+            <div class="phase-card bg-white rounded-xl p-8 phase-3">
+                <div class="flex items-center mb-6">
+                    <div class="bg-pink-100 text-pink-600 rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                        <span class="font-bold text-xl">3</span>
+                    </div>
+                    <h2 class="text-2xl font-bold text-gray-800">Operational Tools & Workflow Development</h2>
+                </div>
+                
+                <div class="mb-6">
+                    <h3 class="text-lg font-semibold text-pink-600 mb-2">Goal</h3>
+                    <p class="text-gray-600">Streamline business operations with essential tools and processes for growth.</p>
+                </div>
+                
+                <div class="mb-6">
+                    <h3 class="text-lg font-semibold text-pink-600 mb-2">Key Steps</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-pink-400 mt-1 mr-2"></i>
+                            <span>Operational Process Mapping – Define workflows for sales, marketing, and customer service</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-pink-400 mt-1 mr-2"></i>
+                            <span>Tool Setup & Integration – CRM, project management platforms, payment gateways, and email marketing</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-pink-400 mt-1 mr-2"></i>
+                            <span>Workflow Optimization – Improve efficiency through automation of simple repetitive tasks</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="mb-6">
+                    <h3 class="text-lg font-semibold text-pink-600 mb-2">Deliverables</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="bg-pink-100 text-pink-700 px-3 py-1 rounded-full text-sm">Operational process maps</span>
+                        <span class="bg-pink-100 text-pink-700 px-3 py-1 rounded-full text-sm">Fully integrated business tools</span>
+                        <span class="bg-pink-100 text-pink-700 px-3 py-1 rounded-full text-sm">Optimized workflows</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flex flex-col justify-center">
+                <div class="benefit-icon bg-pink-100 text-pink-600">
+                    <i class="fas fa-cogs text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-center text-gray-800 mb-4">Customer Benefit</h3>
+                <p class="text-center text-gray-600 text-lg px-8">
+                    A business that runs smoothly and efficiently, giving you more time to focus on growth rather than getting bogged down in operations.
+                </p>
+                
+                <div class="mt-8 flex justify-center">
+                    <div class="bg-pink-100 p-6 rounded-xl max-w-md">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-pink-500 text-white rounded-full w-10 h-10 flex items-center justify-center mr-3">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <h4 class="font-semibold text-gray-800">Time Savings</h4>
+                        </div>
+                        <p class="text-gray-600">
+                            Proper workflows and automation can save up to 20 hours per week, allowing you to focus on strategic growth initiatives.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Journey Line -->
+        <div class="flex justify-center mb-16">
+            <div class="journey-line"></div>
+        </div>
+        
+        <!-- Phase 4 -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+            <div class="order-last lg:order-first flex flex-col justify-center">
+                <div class="benefit-icon bg-yellow-100 text-yellow-600">
+                    <i class="fas fa-rocket text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-center text-gray-800 mb-4">Customer Benefit</h3>
+                <p class="text-center text-gray-600 text-lg px-8">
+                    Smarter decision-making, increased productivity, and a future-ready business built to scale with confidence into new markets.
+                </p>
+                
+                <div class="mt-8 flex justify-center">
+                    <div class="bg-yellow-100 p-6 rounded-xl max-w-md">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-yellow-500 text-white rounded-full w-10 h-10 flex items-center justify-center mr-3">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <h4 class="font-semibold text-gray-800">Competitive Edge</h4>
+                        </div>
+                        <p class="text-gray-600">
+                            Businesses leveraging AI and data analytics grow 3x faster than competitors. Stay ahead with predictive insights and automation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="phase-card bg-white rounded-xl p-8 phase-4">
+                <div class="flex items-center mb-6">
+                    <div class="bg-yellow-100 text-yellow-600 rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                        <span class="font-bold text-xl">4</span>
+                    </div>
+                    <h2 class="text-2xl font-bold text-gray-800">Growth, AI Innovation & Continuous Optimization</h2>
+                </div>
+                
+                <div class="mb-6">
+                    <h3 class="text-lg font-semibold text-yellow-600 mb-2">Goal</h3>
+                    <p class="text-gray-600">Elevate, scale, and future-proof your business using data insights, automation, and AI solutions.</p>
+                </div>
+                
+                <div class="mb-6">
+                    <h3 class="text-lg font-semibold text-yellow-600 mb-2">Key Steps</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-yellow-400 mt-1 mr-2"></i>
+                            <span>Analytics & Performance Tracking – Real-time dashboards for traffic, engagement, and conversions</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-yellow-400 mt-1 mr-2"></i>
+                            <span>Growth Optimization Strategies – Data-driven adjustments to marketing, offers, and workflows</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-yellow-400 mt-1 mr-2"></i>
+                            <span>AI Solutions & Automation – Implement advanced tools to predict trends and personalize customer journeys</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-yellow-400 mt-1 mr-2"></i>
+                            <span>Scaling Support – Expand into new markets, launch new products, and adapt to emerging trends</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="mb-6">
+                    <h3 class="text-lg font-semibold text-yellow-600 mb-2">Deliverables</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-sm">Live analytics dashboard</span>
+                        <span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-sm">Quarterly growth reports</span>
+                        <span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-sm">Custom AI-powered automation systems</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Final CTA -->
+        <div class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 md:p-12 text-center text-white mb-16">
+            <h2 class="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">
+                Neoworx's 4-phase customer journey provides a complete roadmap from brand creation to AI-powered scaling. Let's build your success story together.
+            </p>
+            <button class="bg-white text-blue-600 font-bold px-8 py-3 rounded-full hover:bg-gray-100 transition duration-300 transform hover:scale-105">
+                Start Your Journey Today
+            </button>
+        </div>
+        
+        <!-- Timeline Visualization -->
+        <div class="bg-white rounded-2xl p-8 shadow-xl">
+            <h2 class="text-2xl font-bold text-center text-gray-800 mb-8">Your Growth Timeline</h2>
+            <div class="relative">
+                <!-- Timeline -->
+                <div class="hidden sm:block absolute h-full w-2 bg-gradient-to-b from-blue-500 to-yellow-500 left-1/2 transform -translate-x-1/2"></div>
+                
+                <!-- Timeline Items -->
+                <div class="relative z-10 space-y-8">
+                    <!-- Phase 1 -->
+                    <div class="flex flex-col sm:flex-row items-center">
+                        <div class="flex-1 sm:pr-8 sm:text-right text-center mb-4 sm:mb-0">
+                            <h3 class="text-xl font-bold text-blue-600">Phase 1</h3>
+                            <p class="text-gray-600">Brand Foundation</p>
+                            <p class="text-sm text-gray-500 mt-1">Weeks 1-4</p>
+                        </div>
+                        <div class="w-8 h-8 bg-blue-500 rounded-full border-4 border-white flex-shrink-0 mx-auto sm:mx-0"></div>
+                        <div class="flex-1 sm:pl-8 sm:text-left text-center mt-4 sm:mt-0">
+                            <div class="bg-blue-50 p-4 rounded-lg">
+                                <p class="text-gray-700">Establish your brand identity and strategic foundation</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Phase 2 -->
+                    <div class="flex flex-col sm:flex-row items-center">
+                        <div class="flex-1 sm:pr-8 sm:text-right text-center mb-4 sm:mb-0">
+                            <div class="bg-purple-50 p-4 rounded-lg">
+                                <p class="text-gray-700">Launch your digital presence and content strategy</p>
+                            </div>
+                        </div>
+                        <div class="w-8 h-8 bg-purple-500 rounded-full border-4 border-white flex-shrink-0 mx-auto sm:mx-0"></div>
+                        <div class="flex-1 sm:pl-8 sm:text-left text-center mt-4 sm:mt-0">
+                            <h3 class="text-xl font-bold text-purple-600">Phase 2</h3>
+                            <p class="text-gray-600">Digital Presence</p>
+                            <p class="text-sm text-gray-500 mt-1">Weeks 5-8</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Phase 3 -->
+                    <div class="flex flex-col sm:flex-row items-center">
+                        <div class="flex-1 sm:pr-8 sm:text-right text-center mb-4 sm:mb-0">
+                            <h3 class="text-xl font-bold text-pink-600">Phase 3</h3>
+                            <p class="text-gray-600">Operational Setup</p>
+                            <p class="text-sm text-gray-500 mt-1">Weeks 9-12</p>
+                        </div>
+                        <div class="w-8 h-8 bg-pink-500 rounded-full border-4 border-white flex-shrink-0 mx-auto sm:mx-0"></div>
+                        <div class="flex-1 sm:pl-8 sm:text-left text-center mt-4 sm:mt-0">
+                            <div class="bg-pink-50 p-4 rounded-lg">
+                                <p class="text-gray-700">Implement efficient workflows and business tools</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Phase 4 -->
+                    <div class="flex flex-col sm:flex-row items-center">
+                        <div class="flex-1 sm:pr-8 sm:text-right text-center mb-4 sm:mb-0">
+                            <div class="bg-yellow-50 p-4 rounded-lg">
+                                <p class="text-gray-700">Scale with AI, automation, and data-driven decisions</p>
+                            </div>
+                        </div>
+                        <div class="w-8 h-8 bg-yellow-500 rounded-full border-4 border-white flex-shrink-0 mx-auto sm:mx-0"></div>
+                        <div class="flex-1 sm:pl-8 sm:text-left text-center mt-4 sm:mt-0">
+                            <h3 class="text-xl font-bold text-yellow-600">Phase 4</h3>
+                            <p class="text-gray-600">Growth & Scaling</p>
+                            <p class="text-sm text-gray-500 mt-1">Ongoing</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<p style="border-radius: 8px; text-align: center; font-size: 12px; color: #fff; margin-top: 16px;position: fixed; left: 8px; bottom: 8px; z-index: 10; background: rgba(0, 0, 0, 0.8); padding: 4px 8px;">Made with <img src="https://enzostvs-deepsite.hf.space/logo.svg" alt="DeepSite Logo" style="width: 16px; height: 16px; vertical-align: middle;display:inline-block;margin-right:3px;filter:brightness(0) invert(1);"><a href="https://enzostvs-deepsite.hf.space" style="color: #fff;text-decoration: underline;" target="_blank" >DeepSite</a> - 🧬 <a href="https://enzostvs-deepsite.hf.space?remix=Renrew/neoworx-services" style="color: #fff;text-decoration: underline;" target="_blank" >Remix</a></p></body>
+</html>
